@@ -2,44 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nafisa Tahasin | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hi, I'm Nafisa Tahasin</h1>
-    <p>A passionate developer & GitHub enthusiast</p>
+
+  <header class="hero">
+    <h1>Nafisa Tahasin</h1>
+    <p>B.Tech CSE Student | Aspiring Developer | Tech Enthusiast</p>
+    <div class="links">
+      <a href="https://github.com/nafisatahasin" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/nafisa-tahasin-952960298/" target="_blank">LinkedIn</a>
+      <a href="mailto:nafisatahasin23@gmail.com">Email</a>
+    </div>
   </header>
 
-  <section id="about">
+  <section class="about">
     <h2>About Me</h2>
-    <p>I love building projects, exploring code, and growing as a developer through open source contributions.</p>
+    <p>I'm a Computer Science student at IIIT Jabalpur, passionate about building intelligent applications and contributing to open-source. My interests include AI, web development, and solving real-world problems with technology.</p>
   </section>
 
-  <section id="projects">
-    <h2>My GitHub Projects</h2>
-    <ul id="repo-list">Loading repos...</ul>
+  <section class="skills">
+    <h2>Technical Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Java, Python, C/C++, JavaScript, HTML/CSS</li>
+      <li><strong>Frameworks:</strong> React, Node.js, Flask, TensorFlow</li>
+      <li><strong>Tools:</strong> Git, VS Code, MySQL, Eclipse</li>
+      <li><strong>Libraries:</strong> pandas, NumPy, Scikit-learn, Matplotlib</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3><a href="https://github.com/nafisatahasin/chatbot" target="_blank">Sagittarius Seer Chatbot</a></h3>
+      <p>🔮 AI-powered fortune-teller chatbot for Sagittarius signs using RAG, LangChain, and Streamlit.</p>
+    </div>
+    <div class="project">
+      <h3><a href="https://github.com/nafisatahasin/E-commerce-application" target="_blank">E-commerce Application</a></h3>
+      <p>🛒 Java Android app using JetBrains tools, Google services, and Material Design.</p>
+    </div>
+    <div class="project">
+      <h3><a href="https://github.com/nafisatahasin/Fake_News_Detection" target="_blank">Fake News Detection</a></h3>
+      <p>📰 NLP & ML app that classifies news as real or fake using Scikit-learn and LIAR dataset.</p>
+    </div>
+    <div class="project">
+      <h3><a href="https://github.com/nafisatahasin/Portfolio_website/tree/main" target="_blank">Portfolio Website</a></h3>
+      <p>🌐 Built with Next.js and Tailwind CSS to showcase projects and skills with clean design.</p>
+    </div>
   </section>
 
   <footer>
-    <p>📫 Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>🌐 <a href="https://github.com/nafisatahasin" target="_blank">GitHub Profile</a></p>
+    <p>&copy; 2025 Nafisa Tahasin | <a href="https://medium.com/@nafisatahasin23" target="_blank">Medium</a> | <a href="https://leetcode.com/u/_nafisa/" target="_blank">LeetCode</a></p>
   </footer>
 
-  <script>
-    // Fetch GitHub Repos
-    fetch('https://api.github.com/users/nafisatahasin/repos')
-      .then(response => response.json())
-      .then(repos => {
-        const list = document.getElementById('repo-list');
-        list.innerHTML = '';
-        repos.slice(0, 5).forEach(repo => {
-          const item = document.createElement('li');
-          item.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
-          list.appendChild(item);
-        });
-      });
-  </script>
 </body>
 </html>
+
