@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nafisa Tahasin | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Hi, I'm Nafisa Tahasin</h1>
+    <p>A passionate developer & GitHub enthusiast</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I love building projects, exploring code, and growing as a developer through open source contributions.</p>
+  </section>
+
+  <section id="projects">
+    <h2>My GitHub Projects</h2>
+    <ul id="repo-list">Loading repos...</ul>
+  </section>
+
+  <footer>
+    <p>📫 Contact: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>🌐 <a href="https://github.com/nafisatahasin" target="_blank">GitHub Profile</a></p>
+  </footer>
+
+  <script>
+    // Fetch GitHub Repos
+    fetch('https://api.github.com/users/nafisatahasin/repos')
+      .then(response => response.json())
+      .then(repos => {
+        const list = document.getElementById('repo-list');
+        list.innerHTML = '';
+        repos.slice(0, 5).forEach(repo => {
+          const item = document.createElement('li');
+          item.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+          list.appendChild(item);
+        });
+      });
+  </script>
+</body>
+</html>
